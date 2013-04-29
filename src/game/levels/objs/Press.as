@@ -54,13 +54,16 @@ package game.levels.objs
 			
 			if (_block)
 			{
-				if (mob.x < x)
+				if (mob.isKillable())
 				{
-					mob.x = x - width / 2 - mob.width / 2;
-				}
-				else
-				{
-					mob.x = x + width / 2 + mob.width / 2;
+					if (mob.x < x)
+					{
+						mob.x = x - width / 2 - mob.width / 2;
+					}
+					else
+					{
+						mob.x = x + width / 2 + mob.width / 2;
+					}
 				}
 			}
 		}
